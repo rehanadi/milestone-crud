@@ -114,6 +114,8 @@ if (isset($_GET['delete'])) {
                 <th>No.</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Phone</th>
+                <th>Gender</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -126,6 +128,8 @@ if (isset($_GET['delete'])) {
                     <td><?php echo $no; ?></td>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['phone']; ?></td>
+                    <td><?php echo ($row['gender'] == 'M') ? 'Male' : 'Female'; ?></td>
                     <td>
                         <a href="index.php?edit=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
                         <a href="index.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
