@@ -86,12 +86,12 @@ if (isset($_GET['delete'])) {
         </div>
         <div class="mb-3">
             <label for="phone" class="form-label">Phone <span class="text-danger fw-bold">*</span></label>
-            <input type="text" name="phone" class="form-control" value="<?php echo $phone; ?>" required>
+            <input type="number" name="phone" class="form-control" value="<?php echo $phone; ?>" required>
         </div>
         <div class="mb-3">
             <label for="gender" class="form-label">Gender <span class="text-danger fw-bold">*</span></label>
             <select name="gender" class="form-select" required>
-                <option>- Select Gender -</option>
+                <option value="">- Select Gender -</option>
                 <option value="M" <?php echo ($gender == 'M') ? 'selected' : ''; ?>>Male</option>
                 <option value="F" <?php echo ($gender == 'F') ? 'selected' : ''; ?>>Female</option>
             </select>
